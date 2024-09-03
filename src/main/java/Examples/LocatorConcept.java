@@ -1,6 +1,5 @@
 package Examples;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -10,7 +9,6 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import com.microsoft.playwright.Tracing;
 
 public class LocatorConcept {
 public static void main(String[] args) {
@@ -30,7 +28,8 @@ public static void main(String[] args) {
 	System.out.println("page opened succesfully");
 	
 //	single elements
-//	Locator contactSales = page.locator("xpath =//div[@class=\"d-flex web-menu-btn\"]/ul/li[2]/a/button");
+
+	//	Locator contactSales = page.locator("xpath =//div[@class=\"d-flex web-menu-btn\"]/ul/li[2]/a/button");
 //	contactSales.click();
 	Locator contactSales = page.locator("text = Contact Sales");
 //	int totalBtn =contactSales.count();
