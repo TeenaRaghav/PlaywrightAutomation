@@ -7,7 +7,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
 public class TextSelector {
-<<<<<<< HEAD
+
 	public static void main(String[] args) {
 		Playwright playwright = Playwright.create();
 		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
@@ -28,21 +28,4 @@ public class TextSelector {
 		page.locator("form button:has-text('Login')").click();
 		System.out.println("button clicked");
 	}
-=======
-public static void main(String[] args) {
-	Playwright playwright = Playwright.create();
-	Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-	Page page = browser.newPage();
-	
-//	text selector
-	page.navigate("https://demo.opencart.com/en-gb?route=account/login");
-//	page.locator("text = Contact Sales").last().click();
-//	page.locator("xpath=//p[@class='privacy-policy']/a").click();
-//	System.out.println(page.locator("h2:has-text('New Customer')").textContent());
-	System.out.println(page.locator("div.col mb-3 div.border rounded p-3 d-flex flex-column h-100 h2:has-text('New Customer')").textContent());
-
-//	System.out.println(page.locator("text=New Customer").textContent());
-	
-}
->>>>>>> 81f9e1caa15708f08544b8216203d3a0318c344d
 }
